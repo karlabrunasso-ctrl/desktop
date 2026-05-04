@@ -10,7 +10,7 @@ else()
     set( APPLICATION_NAME       "marchingegno cloud" )
     set( APPLICATION_SHORTNAME  "marchingegnocloud" )
     set( APPLICATION_EXECUTABLE "marchingegnocloud" )
-    set( APPLICATION_ICON_NAME  "${APPLICATION_SHORTNAME}" )
+    set( APPLICATION_ICON_NAME  "Nextcloud" )
 endif()
 
 set( APPLICATION_CONFIG_NAME "${APPLICATION_EXECUTABLE}" )
