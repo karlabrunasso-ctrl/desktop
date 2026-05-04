@@ -1,94 +1,60 @@
-# SPDX-FileCopyrightText: 2017 Nextcloud GmbH and Nextcloud contributors
-# SPDX-FileCopyrightText: 2012 ownCloud GmbH
+# SPDX-FileCopyrightText: 2026 marchingegno
 # SPDX-License-Identifier: GPL-2.0-or-later
-#
-# keep the application name and short name the same or different for dev and prod build
-# or some migration logic will behave differently for each build
+
 if(NEXTCLOUD_DEV)
-    set( APPLICATION_NAME       "NextcloudDev" )
-    set( APPLICATION_SHORTNAME  "NextcloudDev" )
-    set( APPLICATION_EXECUTABLE "nextclouddev" )
-    set( APPLICATION_ICON_NAME  "Nextcloud" )
+    set( APPLICATION_NAME       "marchingegno cloud Dev" )
+    set( APPLICATION_SHORTNAME  "marchingegnoclouddev" )
+    set( APPLICATION_EXECUTABLE "marchingegnoclouddev" )
+    set( APPLICATION_ICON_NAME  "marchingegnocloud" )
 else()
-    set( APPLICATION_NAME       "Nextcloud" )
-    set( APPLICATION_SHORTNAME  "Nextcloud" )
-    set( APPLICATION_EXECUTABLE "nextcloud" )
+    set( APPLICATION_NAME       "marchingegno cloud" )
+    set( APPLICATION_SHORTNAME  "marchingegnocloud" )
+    set( APPLICATION_EXECUTABLE "marchingegnocloud" )
     set( APPLICATION_ICON_NAME  "${APPLICATION_SHORTNAME}" )
 endif()
 
 set( APPLICATION_CONFIG_NAME "${APPLICATION_EXECUTABLE}" )
-set( APPLICATION_DOMAIN     "nextcloud.com" )
-set( APPLICATION_VENDOR     "Nextcloud GmbH" )
-set( APPLICATION_UPDATE_URL "https://updates.nextcloud.org/client/" CACHE STRING "URL for updater" )
-set( APPLICATION_HELP_URL   "" CACHE STRING "URL for the help menu" )
-
-if(APPLE AND APPLICATION_NAME STREQUAL "Nextcloud" AND EXISTS "${CMAKE_SOURCE_DIR}/theme/colored/Nextcloud-macOS-icon.svg")
-    set( APPLICATION_ICON_NAME "Nextcloud-macOS" )
-    message("Using macOS-specific application icon: ${APPLICATION_ICON_NAME}")
-endif()
+set( APPLICATION_DOMAIN     "marchingegno.info" )
+set( APPLICATION_VENDOR     "marchingegno" )
+set( APPLICATION_UPDATE_URL "" CACHE STRING "URL for updater" )
+set( APPLICATION_HELP_URL   "https://marchingegno.info/help" CACHE STRING "URL for the help menu" )
 
 set( APPLICATION_ICON_SET   "SVG" )
-set( APPLICATION_SERVER_URL "" CACHE STRING "URL for the server to use. If entered, the UI field will be pre-filled with it" )
-set( APPLICATION_SERVER_URL_ENFORCE ON ) # If set and APPLICATION_SERVER_URL is defined, the server can only connect to the pre-defined URL
-set( APPLICATION_REV_DOMAIN "com.nextcloud.desktopclient" )
-set( DEVELOPMENT_TEAM "NKUJUXUJ3B" CACHE STRING "Apple Development Team ID" )
-set( APPLICATION_VIRTUALFILE_SUFFIX "nextcloud" CACHE STRING "Virtual file suffix (not including the .)")
+set( APPLICATION_SERVER_URL "https://cloud.marchingegno.info" CACHE STRING "URL for the server to use." )
+set( APPLICATION_SERVER_URL_ENFORCE ON ) 
+set( APPLICATION_REV_DOMAIN "info.marchingegno.desktopclient" )
+set( APPLICATION_VIRTUALFILE_SUFFIX "marchingegno" CACHE STRING "Virtual file suffix")
 set( APPLICATION_OCSP_STAPLING_ENABLED OFF )
 set( APPLICATION_FORBID_BAD_SSL OFF )
 
-set( LINUX_PACKAGE_SHORTNAME "nextcloud" )
+set( LINUX_PACKAGE_SHORTNAME "marchingegnocloud" )
 set( LINUX_APPLICATION_ID "${APPLICATION_REV_DOMAIN}.${LINUX_PACKAGE_SHORTNAME}")
 
 set( THEME_CLASS            "NextcloudTheme" )
 set( WIN_SETUP_BITMAP_PATH  "${CMAKE_SOURCE_DIR}/admin/win/nsi" )
 
-set( MAC_INSTALLER_BACKGROUND_FILE "${CMAKE_SOURCE_DIR}/admin/osx/installer-background.png" CACHE STRING "The MacOSX installer background image")
-
-# set( THEME_INCLUDE          "${OEM_THEME_DIR}/mytheme.h" )
-# set( APPLICATION_LICENSE    "${OEM_THEME_DIR}/license.txt )
-
-## Updater options
-option( BUILD_UPDATER "Build updater" ON )
-
-option( WITH_PROVIDERS "Build with providers list" ON )
-
-option( ENFORCE_VIRTUAL_FILES_SYNC_FOLDER "Enforce use of virtual files sync folder when available" OFF )
-option( DISABLE_VIRTUAL_FILES_SYNC_FOLDER "Disable use of virtual files sync folder even when available" OFF )
-
-option(ENFORCE_SINGLE_ACCOUNT "Enforce use of a single account in desktop client" OFF)
-
-option( DO_NOT_USE_PROXY "Do not use system wide proxy, instead always do a direct connection to server" OFF )
-
-option( WIN_DISABLE_USERNAME_PREFILL "Do not prefill the Windows user name when creating a new account" OFF )
-
-## Theming options
-set(NEXTCLOUD_BACKGROUND_COLOR "#0082c9" CACHE STRING "Default Nextcloud background color")
-set( APPLICATION_WIZARD_HEADER_BACKGROUND_COLOR ${NEXTCLOUD_BACKGROUND_COLOR} CACHE STRING "Hex color of the wizard header background")
-set( APPLICATION_WIZARD_HEADER_TITLE_COLOR "#ffffff" CACHE STRING "Hex color of the text in the wizard header")
-option( APPLICATION_WIZARD_USE_CUSTOM_LOGO "Use the logo from ':/client/theme/colored/wizard_logo.(png|svg)' else the default application icon is used" ON )
+## Opzioni Branding
+set(MARCHINGEGNO_COLOR "#2ecc71" CACHE STRING "Colore principale Marchingegno")
+set( APPLICATION_WIZARD_HEADER_BACKGROUND_COLOR ${MARCHINGEGNO_COLOR} CACHE STRING "Colore header")
+set( APPLICATION_WIZARD_HEADER_TITLE_COLOR "#ffffff" CACHE STRING "Colore testo header")
+option( APPLICATION_WIZARD_USE_CUSTOM_LOGO "" ON )
 
 #
-## Windows Shell Extensions & MSI - IMPORTANT: Generate new GUIDs for custom builds with "guidgen" or "uuidgen"
+## Windows GUIDs - GENERATI NUOVI PER MARCHINGEGNO CLOUD
 #
 if(WIN32)
     # Context Menu
-    set( WIN_SHELLEXT_CONTEXT_MENU_GUID      "{BC6988AB-ACE2-4B81-84DC-DC34F9B24401}" )
+    set( WIN_SHELLEXT_CONTEXT_MENU_GUID      "{A1B2C3D4-E5F6-4A7B-8C9D-0E1F2A3B4C5D}" )
 
     # Overlays
-    set( WIN_SHELLEXT_OVERLAY_GUID_ERROR     "{E0342B74-7593-4C70-9D61-22F294AAFE05}" )
-    set( WIN_SHELLEXT_OVERLAY_GUID_OK        "{E1094E94-BE93-4EA2-9639-8475C68F3886}" )
-    set( WIN_SHELLEXT_OVERLAY_GUID_OK_SHARED "{E243AD85-F71B-496B-B17E-B8091CBE93D2}" )
-    set( WIN_SHELLEXT_OVERLAY_GUID_SYNC      "{E3D6DB20-1D83-4829-B5C9-941B31C0C35A}" )
-    set( WIN_SHELLEXT_OVERLAY_GUID_WARNING   "{E4977F33-F93A-4A0A-9D3C-83DEA0EE8483}" )
+    set( WIN_SHELLEXT_OVERLAY_GUID_ERROR     "{B1C2D3E4-F5A6-4B7C-8D9E-0F1A2B3C4D5E}" )
+    set( WIN_SHELLEXT_OVERLAY_GUID_OK        "{C1D2E3F4-A5B6-4C7D-8E9F-0A1B2C3D4E5F}" )
+    set( WIN_SHELLEXT_OVERLAY_GUID_OK_SHARED "{D1E2F3A4-B5C6-4D7E-8F9A-0B1C2D3E4F5A}" )
+    set( WIN_SHELLEXT_OVERLAY_GUID_SYNC      "{E1F2A3B4-C5D6-4E7F-8A9B-0C1D2E3F4A5B}" )
+    set( WIN_SHELLEXT_OVERLAY_GUID_WARNING   "{F1A2B3C4-D5E6-4F7A-8B9C-0D1E2F3A4B5C}" )
 
-    # MSI Upgrade Code (without brackets)
-    set( WIN_MSI_UPGRADE_CODE                "FD2FCCA9-BB8F-4485-8F70-A0621B84A7F4" )
+    # MSI Upgrade Code
+    set( WIN_MSI_UPGRADE_CODE                "A7B8C9D0-E1F2-4321-B5C6-D7E8F9A0B1C2" )
 
-    # Windows build options
-    option( BUILD_WIN_MSI "Build MSI scripts and helper DLL" OFF )
-    option( BUILD_WIN_TOOLS "Build Win32 migration tools" OFF )
-endif()
-
-if (APPLE AND CMAKE_OSX_DEPLOYMENT_TARGET VERSION_GREATER_EQUAL 11.0)
-    option( BUILD_FILE_PROVIDER_MODULE "Build the macOS virtual files File Provider module" OFF )
+    option( BUILD_WIN_MSI "Build MSI scripts" ON )
 endif()
