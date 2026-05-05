@@ -10,68 +10,13 @@
         <file alias="theme/colored/@APPLICATION_ICON_NAME@-icon-512.png">theme/colored/512-@APPLICATION_ICON_NAME@-icon.png</file>
         <file alias="theme/colored/@APPLICATION_ICON_NAME@-icon-1024.png">theme/colored/1024-@APPLICATION_ICON_NAME@-icon.png</file>
 
-        <!-- client state icons (colored) -->
         <file alias="theme/colored/state-error.svg">theme/colored/@STATE_SUBDIR@state-error.svg</file>
-        <file alias="theme/colored/state-error-16.png">theme/colored/@STATE_SUBDIR@state-error-16.png</file>
-        <file alias="theme/colored/state-error-32.png">theme/colored/@STATE_SUBDIR@state-error-32.png</file>
-        <file alias="theme/colored/state-error-64.png">theme/colored/@STATE_SUBDIR@state-error-64.png</file>
-        <file alias="theme/colored/state-error-128.png">theme/colored/@STATE_SUBDIR@state-error-128.png</file>
-        <file alias="theme/colored/state-error-256.png">theme/colored/@STATE_SUBDIR@state-error-256.png</file>
-
         <file alias="theme/colored/state-ok.svg">theme/colored/@STATE_SUBDIR@state-ok.svg</file>
-        <file alias="theme/colored/state-ok-16.png">theme/colored/@STATE_SUBDIR@state-ok-16.png</file>
-        <file alias="theme/colored/state-ok-32.png">theme/colored/@STATE_SUBDIR@state-ok-32.png</file>
-        <file alias="theme/colored/state-ok-64.png">theme/colored/@STATE_SUBDIR@state-ok-64.png</file>
-        <file alias="theme/colored/state-ok-128.png">theme/colored/@STATE_SUBDIR@state-ok-128.png</file>
-        <file alias="theme/colored/state-ok-256.png">theme/colored/@STATE_SUBDIR@state-ok-256.png</file>
-
         <file alias="theme/colored/state-pause.svg">theme/colored/@STATE_SUBDIR@state-pause.svg</file>
-        <file alias="theme/colored/state-pause-16.png">theme/colored/@STATE_SUBDIR@state-pause-16.png</file>
-        <file alias="theme/colored/state-pause-32.png">theme/colored/@STATE_SUBDIR@state-pause-32.png</file>
-        <file alias="theme/colored/state-pause-64.png">theme/colored/@STATE_SUBDIR@state-pause-64.png</file>
-        <file alias="theme/colored/state-pause-128.png">theme/colored/@STATE_SUBDIR@state-pause-128.png</file>
-        <file alias="theme/colored/state-pause-256.png">theme/colored/@STATE_SUBDIR@state-pause-256.png</file>
-
         <file alias="theme/colored/state-sync.svg">theme/colored/@STATE_SUBDIR@state-sync.svg</file>
-        <file alias="theme/colored/state-sync-16.png">theme/colored/@STATE_SUBDIR@state-sync-16.png</file>
-        <file alias="theme/colored/state-sync-32.png">theme/colored/@STATE_SUBDIR@state-sync-32.png</file>
-        <file alias="theme/colored/state-sync-64.png">theme/colored/@STATE_SUBDIR@state-sync-64.png</file>
-        <file alias="theme/colored/state-sync-128.png">theme/colored/@STATE_SUBDIR@state-sync-128.png</file>
-        <file alias="theme/colored/state-sync-256.png">theme/colored/@STATE_SUBDIR@state-sync-256.png</file>
-
         <file alias="theme/colored/state-offline.svg">theme/colored/@STATE_SUBDIR@state-offline.svg</file>
-        <file alias="theme/colored/state-offline-16.png">theme/colored/@STATE_SUBDIR@state-offline-16.png</file>
-        <file alias="theme/colored/state-offline-32.png">theme/colored/@STATE_SUBDIR@state-offline-32.png</file>
-        <file alias="theme/colored/state-offline-64.png">theme/colored/@STATE_SUBDIR@state-offline-64.png</file>
-        <file alias="theme/colored/state-offline-128.png">theme/colored/@STATE_SUBDIR@state-offline-128.png</file>
-        <file alias="theme/colored/state-offline-256.png">theme/colored/@STATE_SUBDIR@state-offline-256.png</file>
-
         <file alias="theme/colored/state-warning.svg">theme/colored/@STATE_SUBDIR@state-warning.svg</file>
-        <file alias="theme/colored/state-warning-16.png">theme/colored/@STATE_SUBDIR@state-warning-16.png</file>
-        <file alias="theme/colored/state-warning-32.png">theme/colored/@STATE_SUBDIR@state-warning-32.png</file>
-        <file alias="theme/colored/state-warning-64.png">theme/colored/@STATE_SUBDIR@state-warning-64.png</file>
-        <file alias="theme/colored/state-warning-128.png">theme/colored/@STATE_SUBDIR@state-warning-128.png</file>
-        <file alias="theme/colored/state-warning-256.png">theme/colored/@STATE_SUBDIR@state-warning-256.png</file>
 
-        <!-- client state icons (white) -->
-        <file alias="theme/white/state-error.svg">theme/white/@STATE_SUBDIR@state-error.svg</file>
-        <file alias="theme/white/state-ok.svg">theme/white/@STATE_SUBDIR@state-ok.svg</file>
-        <file alias="theme/white/state-pause.svg">theme/white/@STATE_SUBDIR@state-pause.svg</file>
-        <file alias="theme/white/state-sync.svg">theme/white/@STATE_SUBDIR@state-sync.svg</file>
-        <file alias="theme/white/state-offline.svg">theme/white/@STATE_SUBDIR@state-offline.svg</file>
-        <file alias="theme/white/state-warning.svg">theme/white/@STATE_SUBDIR@state-warning.svg</file>
-        <file alias="theme/white/state-info.svg">theme/white/@STATE_SUBDIR@state-info.svg</file>
-
-        <!-- client state icons (black) -->
-        <file alias="theme/black/state-error.svg">theme/black/@STATE_SUBDIR@state-error.svg</file>
-        <file alias="theme/black/state-ok.svg">theme/black/@STATE_SUBDIR@state-ok.svg</file>
-        <file alias="theme/black/state-pause.svg">theme/black/@STATE_SUBDIR@state-pause.svg</file>
-        <file alias="theme/black/state-sync.svg">theme/black/@STATE_SUBDIR@state-sync.svg</file>
-        <file alias="theme/black/state-offline.svg">theme/black/@STATE_SUBDIR@state-offline.svg</file>
-        <file alias="theme/black/state-warning.svg">theme/black/@STATE_SUBDIR@state-warning.svg</file>
-        <file alias="theme/black/state-info.svg">theme/black/@STATE_SUBDIR@state-info.svg</file>
-
-        <!-- colored icons -->
         <file>theme/colored/wizard_logo.png</file>
         <file>theme/colored/wizard_logo.svg</file>
         <file>theme/colored/folder.png</file>
@@ -87,20 +32,11 @@
         <file>theme/colored/delete-bordered.svg</file>
         <file>theme/colored/talk-bordered.svg</file>
         <file>theme/colored/@APPLICATION_ICON_NAME@-icon.svg</file>
-        <file>theme/colored/user-status-online.svg</file>
-        <file>theme/colored/user-status-invisible.svg</file>
-        <file>theme/colored/user-status-away.svg</file>
-        <file>theme/colored/user-status-busy.svg</file>
-        <file>theme/colored/user-status-dnd.svg</file>
         <file>theme/colored/ok.svg</file>
         <file>theme/colored/error.svg</file>
         <file>theme/colored/info.svg</file>
-        <file>theme/colored/offline.svg</file>        
-        <file>theme/colored/pause.svg</file>        
-        <file>theme/colored/warning.svg</file>        
         <file>theme/colored/sync.svg</file>
 
-        <!-- generic (not themed) -->
         <file>theme/sync-arrow.svg</file>
         <file>theme/close.svg</file>
         <file>theme/files.svg</file>
@@ -111,9 +47,6 @@
         <file>theme/more.svg</file>
         <file>theme/change.svg</file>
         <file>theme/lock.svg</file>
-        <file>theme/lock-http.svg</file>
-        <file>theme/lock-https.svg</file>
-        <file>theme/lock-broken.svg</file>
         <file>theme/network.svg</file>
         <file>theme/account.svg</file>
         <file>theme/add.svg</file>
@@ -124,11 +57,6 @@
         <file>theme/delete.svg</file>
         <file>theme/send.svg</file>
         <file>theme/talk-app.svg</file>
-        <file>theme/chevron-double-up.svg</file>
-        <file>theme/call-notification.wav</file>
         <file>theme/info.svg</file>
-        <file>theme/file-open.svg</file>
-        <file>theme/backup.svg</file>
-        <file>theme/convert_to_text.svg</file>
     </qresource>
 </RCC>
